@@ -7,12 +7,14 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import com.univkin.angularspringboot.entite.UserEntite;
 import com.univkin.angularspringboot.repository.UserRepository;
 import com.univkin.angularspringboot.service.UserService;
 import com.univkin.angularspringboot.shared.Utils;
 
+@Service
 public class UserServiceImpl implements UserService {
 
 	@Autowired
