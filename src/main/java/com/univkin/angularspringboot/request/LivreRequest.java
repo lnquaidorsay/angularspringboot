@@ -2,13 +2,20 @@ package com.univkin.angularspringboot.request;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import com.univkin.angularspringboot.entite.Categorie;
 
 public class LivreRequest {
 	private Integer id;
 
+	@NotBlank(message = "Ce champ ne doit pas être null !")
 	private String titre;
 
+	@NotNull(message = "Ce champ ne doit pas être null !")
+	@Size(min = 3, message = "Ce champ doit avoir au moins 3 Caracteres !")
 	private String isbn;
 
 	private LocalDate datePublication;
@@ -17,8 +24,10 @@ public class LivreRequest {
 
 	private Integer nbExemplaires;
 
+	@NotNull(message = "Ce champ ne doit pas être null !")
 	private String auteur;
 
+	@NotNull(message = "Ce champ ne doit pas être null !")
 	private Categorie categorie;
 
 	public LivreRequest() {

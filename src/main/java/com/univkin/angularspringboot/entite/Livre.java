@@ -26,6 +26,8 @@ public class Livre {
 
 	private String titre;
 
+	private String nomEditeur;
+
 	private String isbn;
 
 	private LocalDate datePublication;
